@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.models.trading/src/main/java" creationIcons="false"
+    editorDirectory="" modelPluginID="org.nasdanika.models.trading" modelName="trading"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    bundleManifest="false" featureDelegation="Dynamic" complianceLevel="21.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>trading.ecore</foreignModel>
+  <genPackages prefix="Trading" basePackage="org.nasdanika.models" disposableProviderFactory="true"
+      ecorePackage="trading.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//SecurityType">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/STK"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/OPT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/FUT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/FOP"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/CFD"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/CASH"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/BOND"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/WAR"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/FUND"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/CRYPTO"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/IND"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/CMDTY"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/BAG"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//SecurityType/IOPT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//OrderType">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/MKT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/LMT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/STP"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/STP_LMT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/MIT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/LIT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/TRAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/TRAIL_LIMIT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/REL"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/MOC"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/LOC"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/MIDPRICE"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/ADAPTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/VWAP"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderType/TWAP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//OrderAction">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderAction/BUY"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderAction/SELL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//TimeInForce">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/DAY"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/GTC"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/IOC"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/GTD"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/OPG"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/FOK"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TimeInForce/DTC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//OptionRight">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OptionRight/CALL"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OptionRight/PUT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//OrderStatus">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/PendingSubmit"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/PendingCancel"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/PreSubmitted"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/Submitted"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/ApiCancelled"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/Cancelled"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/Filled"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//OrderStatus/Inactive"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//ProposalStatus">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/DRAFT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/PENDING_REVIEW"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/APPROVED"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/REJECTED"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/EXECUTING"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/EXECUTED"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/PARTIALLY_EXECUTED"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/FAILED"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//ProposalStatus/EXPIRED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//AccountType">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//AccountType/LIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//AccountType/PAPER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//TriggerMethod">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/DOUBLE_BID_ASK"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/LAST"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/DOUBLE_LAST"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/BID_ASK"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/LAST_OR_BID_ASK"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerMethod/MIDPOINT"/>
+    </genEnums>
+    <genClasses ecoreClass="trading.ecore#//Contract">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/conId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/symbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/secType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/exchange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/primaryExchange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/localSymbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/tradingClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/lastTradeDateOrContractMonth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/strike"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/multiplier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Contract/includeExpired"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Contract/comboLegs"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//ComboLeg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ComboLeg/conId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ComboLeg/ratio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ComboLeg/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ComboLeg/exchange"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/orderId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/clientOrderId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/totalQuantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/orderType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/lmtPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/auxPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/tif"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/goodTillDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/outsideRth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/allOrNone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/transmit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/triggerMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/trailingPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/displaySize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/parentId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/ocaGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/orderRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/useAdaptive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/cashQty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Order/contract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Order/algoParams"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//AlgoParams">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/algoStrategy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/endTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/allowPastEndTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/maxPctVol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/noTakeLiq"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//AlgoParams/adaptivePriority"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//TradingProposal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/createdAt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/expiresAt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/agentId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/strategyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/confidence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/expectedReturn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingProposal/maxRisk"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//TradingProposal/orders"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference trading.ecore#//TradingProposal/targetAccount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//TradingProposal/riskParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//TradingProposal/executionResults"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//TradingAccount">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingAccount/accountId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingAccount/alias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingAccount/accountType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingAccount/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingAccount/isActive"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//RiskParameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RiskParameters/maxPositionSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RiskParameters/stopLossPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RiskParameters/takeProfitPercent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RiskParameters/maxDrawdown"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RiskParameters/trailingStopPercent"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//ExecutionResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/executionId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/orderId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/filledQuantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/remainingQuantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/avgFillPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/lastFillPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/commission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/realizedPnL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/executionTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/exchange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//ExecutionResult/errorMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//BracketOrder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//BracketOrder/entryOrder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//BracketOrder/profitTaker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//BracketOrder/stopLoss"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//Position">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Position/contract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/avgCost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/marketPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/marketValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/unrealizedPnL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/realizedPnL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Position/accountId"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//MarketDataSnapshot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//MarketDataSnapshot/contract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/bidPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/bidSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/askPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/askSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/lastPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/lastSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/high"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/low"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/open"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/close"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//MarketDataSnapshot/halted"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
